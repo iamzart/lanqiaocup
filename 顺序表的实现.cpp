@@ -68,6 +68,31 @@ void pop_any(int p)
     }
     n--;
 }
+
+//查找元素
+//按值查找，按位查找
+int find(int x)
+{
+    for (int i = 1;i<=n;i++)
+    {
+        if (arr[i] == x)
+            return i;
+    }
+    return 0;//得等他·找完了再返回没有找到的
+}
+
+//按位查找，时间复杂度是O(1),直接用下标去找，不用遍历数组
+//bug:注意数组是否越界
+
+/*修改元素，把某位置的元素改成啥*/
+
+/*清空操作*/
+void clear()
+{
+    n = 0;
+}
+//bug：如果元素里是指针型，new出来的空间，应该用delete，遍历数组
+
 int main()
 {
     push_back(9);
@@ -86,6 +111,9 @@ int main()
     //3 0 2 1 9 8
     pop_any(2);
     //3 2 1 9 8
+    int d = find(5);
+    int t = find(9);
+    cout << d << " " << t << endl;
     printlist();
     return 0;
 }
