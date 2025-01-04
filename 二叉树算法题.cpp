@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
+#include<string>
 using namespace std;
 const int N = 1e6+10;
 
@@ -163,3 +164,30 @@ const int N = 1e6+10;
 
 
 /*美国血统*/
+//前序遍历的第一个是头节点，
+//也就是说，把所有的左子树传进来，也就是传进来了两个区间，然后，这个区间再去执行那些找根结点划分左右子树、输出的操作
+
+//string s1, s2;
+//void dfs(int l1, int r1, int l2, int r2)
+//{
+//	if (l1 > r1)
+//		return;
+//	int p = l1;
+//	while (s1[p] != s2[l2])//在中序遍历中找根节点
+//	{
+//		p++;
+//	}//跳出循环的时候，p就是中序中根节点的下标
+//	dfs(l1, p - 1, l2 + 1, l2 + p - l1);//遍历左子树
+//	dfs(p + 1, r1, l2 + p - l1 + 1, r2);//处理右子树
+//	cout << s2[l2];
+//}
+//int main()
+//{
+//	cin >> s1 >> s2;
+//	dfs(0,s1.size() - 1, 0, s2.size() - 1);
+//	return 0;
+//}
+
+
+/*二叉树问题*/
+
